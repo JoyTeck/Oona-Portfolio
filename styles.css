@@ -14,6 +14,24 @@ footer {
   margin-bottom: 2px;
 }
 
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:focus,
+nav a:hover {
+  outline: 2px solid #555;
+}
+
 header h1 {
   margin: 0.2px 0;
 }
