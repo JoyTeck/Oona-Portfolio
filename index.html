@@ -2,39 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Oona Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div style="color: white; background-color: black">...</div>
-    <h1>My profile</h1>
-    <p>
-      <b><i>My Name is JoyTeck</i></b>
-    </p>
-    <p>
-        She is a an aspiring frontend developer and entrepreneur with a passion
-        about building digitial solutions and growing succesful ventures.
-    </p>
+    <header>
+      <h1>Oona</h1>
+      <p>Web enthusiast | Minimalist thinker | Curious mind</p>
+    </header>
 
-    <div>
-      <div style="color: white; background-color: black">...</div>
-      <h2>My Top Three Goals</h2>
-      <ol>
-        <li>Learn and master css and javascript framework</li>
-        <li>
-          improve website performance skills by implementing all i have learnt
-        </li>
-        <li>
-          build and deploy 5 personal projecrs within a year to showcase skills
-          and portfolio
-        </li>
-      </ol>
-    </div>
-    <address>
-       <p>You can contact me <img src="Assets/whatsapp_3938041 png.png" width="15" height="15" alt="call">09120797505 
-        <p>Email: <a href="mailto:bukunmioloruntobi@gmail.com">bukunmioloruntobi@gmail.com</a></p>
-</p>
-    </address>
-    </div>
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm a developer passionate about clean design, thoughtful user
+          experiences, and solving real problems with code.
+        </p>
+      </section>
+
+      <section>
+        <h2>Top 3 Goals</h2>
+        <ol>
+          <li>Build impactful and accessible web applications</li>
+          <li>Continue learning and growing as a developer</li>
+          <li>Collaborate with others on meaningful projects</li>
+        </ol>
+      </section>
+
+      <article>
+        <section id="contact" class="contact">
+          <h2>Contact Us</h2>
+          <form>
+              <div class="form-group">
+                  <label>
+                      Name:
+                      <input type="text" placeholder="Enter your name" required>
+                  </label>
+              </div>
+              <div class="form-group">
+                  <label>
+                      Email:
+                      <input type="email" placeholder="Enter your email" required>
+                  </label>
+              </div>
+              <div class="form-group">
+                  <label>
+                      Message:
+                      <textarea name="message" rows="5" placeholder="Enter your message" required></textarea>
+                  </label>
+              </div>
+              <button type="submit" class="submit-button">Send Message</button>
+          </form>
+      </section>
+  
+      <footer>
+          <p>&copy; 2025 Oona. All rights reserved.</p>
+      </footer>
   </body>
-</html>
+  </html>
