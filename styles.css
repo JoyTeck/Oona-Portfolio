@@ -1,45 +1,77 @@
+/* ================================
+   Root Variables & Base Styles
+=============================== */
+:root {
+  --primary-color: #000;
+  --secondary-color: #444;
+  --background-color: whitesmoke;
+  --accent-color: #fff;
+  --hover-bg: #eee;
+  --focus-outline: 2px dashed #000;
+  --padding: 10px;
+  --radius: 4px;
+  --font-main: "Poppins", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
+
 body {
-  margin: auto;
-  max-width: 600px;
-  padding: 10px;
+  font-family: var(--font-main);
+  font-size: 16px;
   line-height: 1.6;
-  color: #333;
-  background-color: whitesmoke;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  max-width: 600px;
+  margin: auto;
+  padding: var(--padding);
 }
+
+/* ================================
+   Header & Navigation
+=============================== */
+
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1px;
+  padding: var(--padding);
+  background-color: #ccc;
+  border-radius: var(--radius);
 }
-.logo {
-  font-size: 20px;
+
+.logo-title h1 {
+  font-size: 24px;
   font-weight: bold;
-  color: white;
-  text-decoration: none;
 }
 nav ul {
   list-style: none;
   display: flex;
   gap: 5px;
-  padding: 10px;
 }
 
 nav ul li a {
-  color: black;
   text-decoration: none;
-  padding: 5px 5px;
-  border-radius: 5px;
+  color: var(--primary-color);
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease;
 }
-nav ul li a:hover {
-  background-color: white;
+nav ul li a:hover nav ul li a:focus {
+  background-color: var(--hover-bg);
+  outline: none;
+}
+
+/* Responsive Navigation - Stack links on smaller screens */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 nav ul li {
@@ -55,15 +87,45 @@ article {
   margin-bottom: 2px;
 }
 
+/* ================================
+   Typography
+=============================== */
 h2 {
-  font-size: 35px;
+  font-size: 28px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px 0;
+}
+
+p,
+ol {
+  margin-bottom: 15px;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+/* ================================
+   Contact Form Section
+=============================== */
+.contact {
+  padding: 20px 0;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 input,
@@ -73,35 +135,25 @@ textarea {
   border-radius: 4px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+input:focus,
+textarea:focus {
+  outline: var(--focus-outline);
+  background-color: #fdfdfd;
 }
 
 .submit-button {
-  padding: 10px 10px;
-  font-size: 1rem;
-  color: white;
-  background-color: black;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius);
   cursor: pointer;
+  transition: background-color 0.3 ease;
 }
 
-.submit:hover {
-  background-color: #555;
-}
-
-.contact,
-form {
-  padding: 20px 0;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 20px;
+.submit:hover .submit-button:focus {
+  background-color: var(--secondary-color);
+  outline: none;
 }
 
 footer {
