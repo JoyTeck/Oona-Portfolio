@@ -156,10 +156,24 @@ textarea:focus {
   outline: none;
 }
 
+/* ================================
+   Footer
+=============================== */
 footer {
   background-color: grey;
   color: white;
   text-align: center;
   padding: 20px 0;
   margin-top: 30px;
+}
+
+/* ================================
+   Section Layout & Spacing
+=============================== */
+section,
+article {
+  margin-bottom: 20px;
+  padding: var(--padding);
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
 }
